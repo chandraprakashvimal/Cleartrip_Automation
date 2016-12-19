@@ -40,6 +40,12 @@ public class Home {
 	@FindBy(xpath = "//*[@id='ResultContainer_1_1']//*[@class='booking fRight']")
 	public WebElement bookFlightBtn;
 	
+	@FindBy(xpath="//*[@id='itinBlock']/div/div/div[1]/h1")
+	public WebElement journy1;
+	
+	@FindBy(xpath="//*[@id='itinBlock']/div/div/div[2]/h1")
+	public WebElement journy2;
+	
 	@FindBy(xpath = "//*[@id='insurance_confirm']")
 	public WebElement acceptTnC;
 

@@ -38,26 +38,40 @@ public class BookRoundTrip extends BaseScript {
 			Thread.sleep(1000);
 
 			// Select departure date
-			home.setDate("18", "February", "2016");
+			String date1 = "18", month1 = "February", year1 = "2016";
+			home.setDate(date1, month1, year1);
 			Thread.sleep(1000);
 			// Select return date
-			home.setDate("18", "March", "2016");
+			String date2 = "19", month2 = "March", year2 = "2016";
+			home.setDate(date2, month2, year2);
 			Thread.sleep(1000);
 
 			home.searchFlightBtn.click();
-			
+
 			wait.until(ExpectedConditions.elementToBeClickable(home.bookFlightBtn));
 			Assert.assertEquals(driver.getTitle(), "Cleartrip | New Delhi ⇄ Lucknow");
-			
+
 			home.bookFlightBtn.click();
-			
+
 			wait.until(ExpectedConditions.elementToBeClickable(home.continueBookingBtn));
 			Assert.assertEquals(driver.getTitle(), "Cleartrip | Book your flight securely in simple steps");
+
+			String journey1 = home.journy1.getText(), journey2 = home.journy2.getText();
+
+			if (journey1.contains("New Delhi → Lucknow") && journey1.contains(date1)
+					&& journey1.contains(month1.substring(0, 2))) {
+				Assert.assertTrue(true, "Journey 1 data is correct");
+			}
+
+			if (journey2.contains("Lucknow → New Delhi") && journey2.contains(date2)
+					&& journey2.contains(month2.substring(0, 2))) {
+				Assert.assertTrue(true, "Journey 2 data is correct");
+			}
 
 			if (!home.acceptTnC.isSelected()) {
 				home.acceptTnC.click();
 			}
-			
+
 			home.continueBookingBtn.click();
 
 			wait.until(ExpectedConditions.elementToBeClickable(home.email));
@@ -92,7 +106,7 @@ public class BookRoundTrip extends BaseScript {
 			home.cardHolderName.sendKeys("chandra prakash vimal");
 			home.cvv.clear();
 			home.cvv.sendKeys("123");
-			home.currency.get(0).click();			
+			home.currency.get(0).click();
 			home.makePayment.click();
 
 		} catch (Exception e) {
