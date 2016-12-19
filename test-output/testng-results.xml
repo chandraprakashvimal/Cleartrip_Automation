@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16456" started-at="2016-12-19T17:33:02Z" finished-at="2016-12-19T17:33:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16456" started-at="2016-12-19T17:33:02Z" finished-at="2016-12-19T17:33:19Z">
+      <class name="com.gojek.Test.BookRoundTrip">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.gojek.Test.BookRoundTrip@224edc67]" name="init" is-config="true" duration-ms="6567" started-at="2016-12-19T23:03:02Z" finished-at="2016-12-19T23:03:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="RoundTrip()[pri:0, instance:com.gojek.Test.BookRoundTrip@224edc67]" name="RoundTrip" duration-ms="9868" started-at="2016-12-19T23:03:09Z" finished-at="2016-12-19T23:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RoundTrip -->
+      </class> <!-- com.gojek.Test.BookRoundTrip -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -35,6 +35,17 @@ public class BookRoundTrip extends BaseScript {
 			home.selectDetination("Lucknow, IN - Amausi (LKO)");
 			Thread.sleep(1000);
 
+			// Select departure date
+			home.setDate("18", "February", "2016");
+			Thread.sleep(1000);
+			// Select return date
+			home.setDate("18", "March", "2016");
+			Thread.sleep(1000);
+
+			home.searchFlightBtn.click();
+			
+			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw e;
