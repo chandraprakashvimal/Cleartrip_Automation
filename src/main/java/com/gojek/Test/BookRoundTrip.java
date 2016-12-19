@@ -63,6 +63,7 @@ public class BookRoundTrip extends BaseScript {
 			wait.until(ExpectedConditions.elementToBeClickable(home.email));
 			home.email.clear();
 			home.email.sendKeys("cp@yahoo.com");
+			Thread.sleep(1000);
 			home.continueBtn1.click();
 
 			wait.until(ExpectedConditions.elementToBeClickable(home.title));
@@ -81,15 +82,15 @@ public class BookRoundTrip extends BaseScript {
 			Actions act = new Actions(driver);
 			act.moveToElement(home.debitCardTab);
 			home.debitCardTab.click();
-			home.debitCardNo.click();
+			home.debitCardNo.clear();
 			home.debitCardNo.sendKeys("55201881001635781");
-			home.expMonth.click();
+			Thread.sleep(500);
 			home.expMonth.sendKeys("01");
-			home.expYear.click();
+			Thread.sleep(500);
 			home.expYear.sendKeys("2019");
-			home.cardHolderName.click();
+			home.cardHolderName.clear();
 			home.cardHolderName.sendKeys("chandra prakash vimal");
-			home.cvv.click();
+			home.cvv.clear();
 			home.cvv.sendKeys("123");
 			home.currency.get(0).click();			
 			home.makePayment.click();
