@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class Home {
@@ -38,6 +39,63 @@ public class Home {
 
 	@FindBy(xpath = "//*[@id='ResultContainer_1_1']//*[@class='booking fRight']")
 	public WebElement bookFlightBtn;
+	
+	@FindBy(xpath = "//*[@id='insurance_confirm']")
+	public WebElement acceptTnC;
+
+	@FindBy(xpath = "//*[@id='itineraryBtn']")
+	public WebElement continueBookingBtn;
+
+	@FindBy(xpath = "//*[@id='username']")
+	public WebElement email;
+
+	@FindBy(xpath = "//*[@id='Login']/dl[1]/dd[2]/label")
+	public WebElement checkClearTricpAcc;
+
+	@FindBy(xpath = "//*[@id='LoginContinueBtn_1']")
+	public WebElement continueBtn1;
+
+	@FindBy(xpath = "//*[@id='AdultTitle1']")
+	public WebElement title;
+
+	@FindBy(xpath = "//*[@id='intADDAD1']//*[@id='AdultFname1']")
+	public WebElement fname;
+
+	@FindBy(xpath = "//*[@id='intADDAD1']//*[@id='AdultLname1']")
+	public WebElement lname;
+
+	@FindBy(xpath = "//*[@id='travellerDetails']//*[@id='mobileNumber']")
+	public WebElement mobileN;
+
+	@FindBy(xpath = "//*[@id='travellerBtn']")
+	public WebElement continueBtn2;
+
+	@FindBy(xpath = "//*[@id='DCTab']/a")
+	public WebElement debitCardTab;
+
+	@FindBy(xpath = "//*[@id='debitCardNumberDisp']")
+	public WebElement debitCardNo;
+
+	@FindBy(xpath = "//*[@id='DcExpirationMonth']")
+	public WebElement expMonth;
+
+	@FindBy(xpath = "//*[@id='DcExpirationYear']")
+	public WebElement expYear;
+
+	@FindBy(xpath = "//*[@id='paybyDC']//*[@id='BillName']")
+	public WebElement cardHolderName;
+
+	@FindBy(xpath = "//*[@id='cvvCodeDc']")
+	public WebElement cvv;
+
+	@FindBy(xpath = "//*[@id='consent']")
+	public WebElement tnCpnCCheckBx;
+
+	@FindBys(@FindBy(xpath = "//*[@id='native_currency']"))
+	public List<WebElement> currency;
+
+	@FindBy(xpath = "//*[@id='paymentSubmit']")
+	public WebElement makePayment;
 	
 	public Boolean selectSource(String source) {
 		sourceTextBox.clear();
